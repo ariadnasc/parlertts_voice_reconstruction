@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can we reconstruct a dysarthric voice with the large speech model Parler TTS? Audio samples</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        /* Main container with grid layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal columns by default */
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* Styling for each sample block */
+        .audio-sample {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        p {
+            font-size: 1em;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 280px;
+            margin-top: 10px;
+        }
+
+        /* Span the item across both columns */
+        .span-two-columns {
+            grid-column: span 2;  /* This will make the element span across both columns */
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Can we reconstruct a dysarthric voice with the large speech model Parler TTS?</h1>
+
+    <p style="text-align: left;">Speech disorders can make communication hard or even impossible for those who develop them. Personalised Text-to-Speech is an attractive option as a communication aid. 
+        We attempt voice reconstruction using a large speech model, with which we generate an approximation of a dysarthric speaker's voice prior to the onset of their condition. 
+        In particular, we investigate whether a state-of-the-art large speech model, Parler TTS, can generate intelligible speech while maintaining speaker identity. 
+        We curate a dataset and annotate it with relevant speaker and intelligibility information, and use this to fine-tune the model. 
+        Our results show that the model can indeed learn to generate from the distribution of this challenging data, but struggles to control intelligibility and to maintain consistent speaker identity. 
+        We propose future directions to improve controllability of this class of model, for the voice reconstruction task.
+    </p>
+    <p style="text-align: left;">
+        Paper accepted at Interspeech 2025, and available at: ADD_LINK
+    </p>
+
+    <div class="audio-sample span-two-columns">
+        <h2>Speaker A</h2>
+        <p>Here are some recordings of speaker A:</p>
+        <div class="audio-grid">
+            <div class="audio-sample">
+                <audio controls>
+                    <source src="speaker_A/recordings/recording_spkA_1.mp3" type="audio/mp3">
+                </audio>
+                <audio controls>
+                    <source src="speaker_A/recordings/recording_spkA_2.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+        <p>Here is some TTS synthesis for speaker A, using the prompt: <br> 
+            "Carla speaks with a monotone and moderate pitched voice, with extremely good intelligibility, and is delivering her speech at a moderate speed in a confined environment."</p>
+        <div class="audio-grid">
+            <div class="audio-sample">
+                <p>
+                    <audio controls>
+                        <source src="speaker_A/synthesis/clarity_40.mp3" type="audio/mp3">
+                    </audio>
+                    For me, every concert is new and exciting.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_A/synthesis/clarity_46.mp3" type="audio/mp3">
+                    </audio>
+                    Yes, of course it was the whole truth.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_A/synthesis/clarity_58.mp3" type="audio/mp3">
+                    </audio>
+                    Think the whole process through once again.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_A/synthesis/clarity_101.mp3" type="audio/mp3">
+                    </audio>
+                    Do you know where he hid it?
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_A/synthesis/clarity_115.mp3" type="audio/mp3">
+                    </audio>
+                    I don't want to but I must.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="audio-sample span-two-columns">
+        <h2>Speaker B</h2>
+        <p>Here are some recordings of speaker B:</p>
+        <div class="audio-grid">
+            <div class="audio-sample">
+                <audio controls>
+                    <source src="speaker_B/recordings/recording_spkB_1.mp3" type="audio/mp3">
+                </audio>
+                <audio controls>
+                    <source src="speaker_B/recordings/recording_spkB_2.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+        <p>Here is some TTS synthesis for speaker B, using the prompt: <br>
+           "Ralph speaks with a monotone and moderate pitched voice, with extremely good intelligibility, and is delivering his speech at a moderate speed in a confined environment."</p>
+        <div class="audio-grid">
+            <div class="audio-sample">
+                <p>
+                    <audio controls>
+                        <source src="speaker_B/synthesis/clarity_40.mp3" type="audio/mp3">
+                    </audio>
+                    For me, every concert is new and exciting.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_B/synthesis/clarity_46.mp3" type="audio/mp3">
+                    </audio>
+                    Yes, of course it was the whole truth.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_B/synthesis/clarity_58.mp3" type="audio/mp3">
+                    </audio>
+                    Think the whole process through once again.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_B/synthesis/clarity_101.mp3" type="audio/mp3">
+                    </audio>
+                    Do you know where he hid it?
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_B/synthesis/clarity_115.mp3" type="audio/mp3">
+                    </audio>
+                    I don't want to but I must.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="audio-sample span-two-columns">
+        <h2>Speaker C</h2>
+        <p>Here are some recordings of speaker C:</p>
+        <div class="audio-grid">
+            <div class="audio-sample">
+                <audio controls>
+                    <source src="speaker_C/recordings/recording_spkC_1.mp3" type="audio/mp3">
+                </audio>
+                <audio controls>
+                    <source src="speaker_C/recordings/recording_spkC_2.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+        <p>Here is some TTS synthesis for speaker C, using the prompt: <br>
+           "Tracy speaks with a monotone and moderate pitched voice, with extremely good intelligibility, and is delivering her speech at a moderate speed in a confined environment."</p>
+        <div class="audio-grid">
+            <div class="audio-sample">
+                <p>
+                    <audio controls>
+                        <source src="speaker_C/synthesis/clarity_40.mp3" type="audio/mp3">
+                    </audio>
+                    For me, every concert is new and exciting.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_C/synthesis/clarity_46.mp3" type="audio/mp3">
+                    </audio>
+                    Yes, of course it was the whole truth.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_C/synthesis/clarity_58.mp3" type="audio/mp3">
+                    </audio>
+                    Think the whole process through once again.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_C/synthesis/clarity_101.mp3" type="audio/mp3">
+                    </audio>
+                    Do you know where he hid it?
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_C/synthesis/clarity_115.mp3" type="audio/mp3">
+                    </audio>
+                    I don't want to but I must.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="audio-sample span-two-columns">
+        <h2>Speaker D</h2>
+        <p>Here are some recordings of speaker D:</p>
+        <div class="audio-grid">
+            <div class="audio-sample">
+                <audio controls>
+                    <source src="speaker_D/recordings/recording_spkD_1.mp3" type="audio/mp3">
+                </audio>
+                <audio controls>
+                    <source src="speaker_D/recordings/recording_spkD_2.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+        <p>Here is some TTS synthesis for speaker D, using the prompt: <br>
+           "Jose speaks with a monotone and moderate pitched voice, with extremely good intelligibility, and is delivering his speech at a moderate speed in a confined environment."</p>
+        <div class="audio-grid">
+            <div class="audio-sample">
+                <p>
+                    <audio controls>
+                        <source src="speaker_D/synthesis/clarity_40.mp3" type="audio/mp3">
+                    </audio>
+                    For me, every concert is new and exciting.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_D/synthesis/clarity_46.mp3" type="audio/mp3">
+                    </audio>
+                    Yes, of course it was the whole truth.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_D/synthesis/clarity_58.mp3" type="audio/mp3">
+                    </audio>
+                    Think the whole process through once again.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_D/synthesis/clarity_101.mp3" type="audio/mp3">
+                    </audio>
+                    Do you know where he hid it?
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_D/synthesis/clarity_115.mp3" type="audio/mp3">
+                    </audio>
+                    I don't want to but I must.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="audio-sample span-two-columns">
+        <h2>Speaker E</h2>
+        <p>Here are some recordings of speaker E:</p>
+        <div class="audio-grid">
+            <div class="audio-sample">
+                <audio controls>
+                    <source src="speaker_E/recordings/recording_spkE_1.mp3" type="audio/mp3">
+                </audio>
+                <audio controls>
+                    <source src="speaker_E/recordings/recording_spkE_2.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+        <p>Here is some TTS synthesis for speaker E, using the prompt: <br>
+           "Juana speaks with a monotone and moderate pitched voice, with extremely good intelligibility, and is delivering her speech at a moderate speed in a confined environment."</p>
+        <div class="audio-grid">
+            <div class="audio-sample">
+                <p>
+                    <audio controls>
+                        <source src="speaker_E/synthesis/clarity_40.mp3" type="audio/mp3">
+                    </audio>
+                    For me, every concert is new and exciting.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_E/synthesis/clarity_46.mp3" type="audio/mp3">
+                    </audio>
+                    Yes, of course it was the whole truth.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_E/synthesis/clarity_58.mp3" type="audio/mp3">
+                    </audio>
+                    Think the whole process through once again.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_E/synthesis/clarity_101.mp3" type="audio/mp3">
+                    </audio>
+                    Do you know where he hid it?
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_E/synthesis/clarity_115.mp3" type="audio/mp3">
+                    </audio>
+                    I don't want to but I must.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="audio-sample span-two-columns">
+        <h2>Speaker F</h2>
+        <p>Here are some recordings of speaker F:</p>
+        <div class="audio-grid">
+            <div class="audio-sample">
+                <audio controls>
+                    <source src="speaker_F/recordings/recording_spkF_1.mp3" type="audio/mp3">
+                </audio>
+                <audio controls>
+                    <source src="speaker_F/recordings/recording_spkF_2.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+        <p>Here is some TTS synthesis for speaker F, using the prompt: <br>
+            "Jason speaks with a monotone and moderate pitched voice, with extremely good intelligibility, and is delivering his speech at a moderate speed in a confined environment."</p> 
+        <div class="audio-grid">
+            <div class="audio-sample">
+                <p>
+                    <audio controls>
+                        <source src="speaker_F/synthesis/clarity_40.mp3" type="audio/mp3">
+                    </audio>
+                    For me, every concert is new and exciting.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_F/synthesis/clarity_46.mp3" type="audio/mp3">
+                    </audio>
+                    Yes, of course it was the whole truth.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_F/synthesis/clarity_58.mp3" type="audio/mp3">
+                    </audio>
+                    Think the whole process through once again.
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_F/synthesis/clarity_101.mp3" type="audio/mp3">
+                    </audio>
+                    Do you know where he hid it?
+                </p>
+                <p>
+                    <audio controls>
+                        <source src="speaker_D/synthesis/clarity_115.mp3" type="audio/mp3">
+                    </audio>
+                    I don't want to but I must.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
